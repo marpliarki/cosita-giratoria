@@ -24,6 +24,8 @@
             var e = document.getElementById(axis)
             e.textContent = gyro[axis]
         }
+        
+        var gyroscope;
 
         navigator.permissions.query({name:'gyroscope'}).then(function(result) {
             if (result.state === 'granted') {
@@ -31,7 +33,7 @@
                 
 
                 s.textContent = "Granted"
-                let gyroscope = new Gyroscope({frequency: 10});
+                gyroscope = new Gyroscope({frequency: 10});
 
                 console.log(gyroscope)
                 //var a = JSON.stringify(gyroscope)
@@ -45,8 +47,8 @@
                 console.log(classToObject(gyroscope))
                 //s.textContent =  a
                 gyroscope.addEventListener('reading', e => {
-                    var xid = document.getElementById("x")
-                    xid.textContent = gyroscope.x
+                    //var xid = document.getElementById("x")
+                    //xid.textContent = gyroscope.x
                 //console.log("Angular velocity along the X-axis " + gyroscope.x);
                 //console.log("Angular velocity along the Y-axis " + gyroscope.y);
                 //console.log("Angular velocity along the Z-axis " + gyroscope.z);
