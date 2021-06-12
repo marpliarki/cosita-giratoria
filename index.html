@@ -58,8 +58,11 @@
                 //showLocalNewsWithGeolocation();
             } else if (result.state === 'prompt') {
                 //showButtonToEnableLocalNews();
+            } else {
+                alert("permission denied")
             }
         // Don't do anything if the permission was denied.
+            
         });
 
 
