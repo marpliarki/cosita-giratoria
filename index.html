@@ -9,6 +9,9 @@
             <p>Grant status:</p>
             <p id="status">Not granted</p>
         </div>
+        <div>
+            <h2 id="error">error?</h2>
+        </div>
     </body>
     <script>
         const classToObject = theClass => {
@@ -46,7 +49,10 @@
 
                 console.log(classToObject(gyroscope))
                 //s.textContent =  a
-                gyroscope.addEventListener('error', error => console.log(`Error: ${error.error}`));
+                gyroscope.addEventListener('error', error => {
+                    console.log(`Error: ${error.error}`)
+                    document.getElementById("error").textContent = error.error
+                });
                 
                 gyroscope.addEventListener('reading', e => {
                     //var xid = document.getElementById("x")
