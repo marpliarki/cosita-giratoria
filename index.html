@@ -30,7 +30,7 @@
                 var s = document.getElementById("status")
                 
 
-                //s.textContent = "Granted"
+                s.textContent = "Granted"
                 let gyroscope = new Gyroscope({frequency: 10});
 
                 console.log(gyroscope)
@@ -50,9 +50,9 @@
                 //console.log("Angular velocity along the X-axis " + gyroscope.x);
                 //console.log("Angular velocity along the Y-axis " + gyroscope.y);
                 //console.log("Angular velocity along the Z-axis " + gyroscope.z);
-                    //update("x", gyroscope)
-                    //update("y", gyroscope)
-                    //update("z", gyroscope)
+                    update("x", gyroscope)
+                    update("y", gyroscope)
+                    update("z", gyroscope)
                 });
                 gyroscope.start();
                 //showLocalNewsWithGeolocation();
