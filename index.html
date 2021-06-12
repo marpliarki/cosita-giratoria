@@ -46,7 +46,7 @@
 
                 console.log(classToObject(gyroscope))
                 //s.textContent =  a
-                gyroscope.addEventListener('error', error => console.log(`Error: ${error}`));
+                gyroscope.addEventListener('error', error => console.log(`Error: ${error.error}`));
                 
                 gyroscope.addEventListener('reading', e => {
                     //var xid = document.getElementById("x")
